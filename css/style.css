@@ -87,9 +87,9 @@ h6,
 
 /* Transparent background and white text by default */
 .btn-primary {
-    background-color: transparent;
+    background-color: var(--primary);
     color: #FFFFFF;
-    border: 1px solid var(--light);
+   
 }
 .btn-secondaryy {
     background-color: var(--primary);
@@ -99,8 +99,8 @@ h6,
 
 /* On hover: background becomes primary, text becomes black */
 .btn-primary:hover {
-    background-color: var(--primary);
-    color: #000000;
+    background-color: var(--light);
+    color: black;
 }
 
 

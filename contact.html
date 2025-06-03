@@ -45,41 +45,71 @@
 
     <!-- Navbar Start -->
      <div class="container-fluid p-0">
-  <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-    <!-- Brand -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid">
     <a href="index.html" class="navbar-brand p-0 me-4">
       <h2 class="m-0"><i class="fa-solid fa-code"></i> WebDev Solutions</h2>
     </a>
 
-    <!-- Toggler for small screens -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <!-- Sidebar Toggler for small screens (visible only below lg) -->
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <!-- Centered nav links -->
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+    <!-- Standard Navbar for md and above -->
+    <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center" id="navbarCollapse">
+      <ul class="navbar-nav mb-2 mb-lg-0 text-center">
         <li class="nav-item">
-          <a href="index.html" class="nav-link">Home</a>
-        </li>
-         <li class="nav-item">
-          <a href="about.html" class="nav-link">About</a>
+          <a class="nav-link " href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a href="service.html" class="nav-link">Services</a>
+          <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a href="contact.html" class="nav-link active">Contact</a>
+          <a class="nav-link" href="service.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contact.html">Contact</a>
         </li>
       </ul>
+    </div>
 
-      <!-- Hire Us button -->
-      <div class="d-none d-lg-block">
-        <a href="https://wa.me/+923278458039" target="_blank" class="btn btn-secondaryy px-4">Hire Us</a>
+    <!-- Sidebar for small screens -->
+    <div class="offcanvas offcanvas-start text-white d-lg-none" tabindex="-1" id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="service.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="text-center mt-3">
+          <a href="https://wa.me/+923278458039" target="_blank" class="btn btn-primary px-4">Hire Us</a>
+        </div>
       </div>
     </div>
-  </nav>
+
+    <!-- Hire Us button (always visible on large screens) -->
+    <div class="d-none d-lg-block">
+      <a href="https://wa.me/+923278458039" target="_blank" class="btn btn-primary px-4">Hire Us</a>
+    </div>
+  </div>
+</nav>
 </div>
 
         <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
@@ -117,8 +147,8 @@
 
 
     <!-- Contact Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
+    <div class="container-fluid py-3 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-3">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-primary text-uppercase">Contact Us</h5>
                 <h1 class="mb-0">If You Have Any Query, Feel Free To Contact Us</h1>
@@ -187,12 +217,17 @@
                     </form>
                 </div>
 
-
-
-
-                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6806.393370759766!2d74.21222088872334!3d31.46377524837362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918fdf92864c63f%3A0xeb1f57d4a5fa9db3!2sEden%20Value%20Homes%2C%20Lahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1748899716106!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+              <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
+  <div class="ratio ratio-4x3">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6806.393370759766!2d74.21222088872334!3d31.46377524837362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918fdf92864c63f%3A0xeb1f57d4a5fa9db3!2sEden%20Value%20Homes%2C%20Lahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1748899716106!5m2!1sen!2s" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
             </div>
         </div>
     </div>

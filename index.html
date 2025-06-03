@@ -41,41 +41,73 @@
 
     <!-- Navbar & Carousel Start -->
    <div class="container-fluid p-0">
-  <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-    <!-- Brand -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid">
     <a href="index.html" class="navbar-brand p-0 me-4">
       <h2 class="m-0"><i class="fa-solid fa-code"></i> WebDev Solutions</h2>
     </a>
 
-    <!-- Toggler for small screens -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <!-- Sidebar Toggler for small screens (visible only below lg) -->
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <!-- Centered nav links -->
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+    <!-- Standard Navbar for md and above -->
+    <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center" id="navbarCollapse">
+      <ul class="navbar-nav mb-2 mb-lg-0 text-center">
         <li class="nav-item">
-          <a href="index.html" class="nav-link active">Home</a>
+          <a class="nav-link active" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a href="about.html" class="nav-link">About</a>
+          <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a href="service.html" class="nav-link">Services</a>
+          <a class="nav-link" href="service.html">Services</a>
         </li>
         <li class="nav-item">
-          <a href="contact.html" class="nav-link">Contact</a>
+          <a class="nav-link" href="contact.html">Contact</a>
         </li>
       </ul>
+    </div>
 
-      <!-- Hire Us button -->
-      <div class="d-none d-lg-block">
-        <a href="https://wa.me/+923278458039" target="_blank" class="btn btn-secondaryy px-4">Hire Us</a>
+    <!-- Sidebar for small screens -->
+    <div class="offcanvas offcanvas-start text-white d-lg-none" tabindex="-1" id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 text-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="service.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="text-center mt-3">
+          <a href="https://wa.me/+923278458039" target="_blank" class="btn btn-primary px-4">Hire Us</a>
+        </div>
       </div>
     </div>
-  </nav>
+
+    <!-- Hire Us button (always visible on large screens) -->
+    <div class="d-none d-lg-block">
+      <a href="https://wa.me/+923278458039" target="_blank" class="btn btn-primary px-4">Hire Us</a>
+    </div>
+  </div>
+</nav>
+
 </div>
 <!-- Carousel Starts -->
 
