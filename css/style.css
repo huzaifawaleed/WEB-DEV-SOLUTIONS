@@ -136,8 +136,6 @@ h6,
 
 
 /*** Navbar ***/
-
-
 .navbar-dark .navbar-nav .nav-link {
     font-family: 'Nunito', sans-serif;
     position: relative;
@@ -170,10 +168,15 @@ h6,
 }
 
 @media (max-width: 991.98px) {
-    .sticky-top.navbar-dark {
-        position: relative;
-        background: #FFFFFF;
-    }
+  .sticky-top.navbar-dark {
+    position: fixed; /* ✅ Fixes the sticky behavior on mobile */
+    width: 100%;      /* ✅ Ensures full width */
+    top: 0;           /* ✅ Keeps it at top */
+    left: 0;
+    z-index: 999;
+    background: #FFFFFF;
+  }
+
 
     .navbar-dark .navbar-nav .nav-link,
     .navbar-dark .navbar-nav .nav-link.show,
@@ -506,4 +509,13 @@ h6,
     .footer-about {
         margin-bottom: -75px;
     }
+}
+/* Default hamburger icon (white lines on dark navbar) */
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Sticky white navbar — change icon color to your primary color */
+.sticky-top.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%230d6efd' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
